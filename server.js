@@ -2,6 +2,10 @@ var ip = process.env.OPENSHIFT_NODEJS_IP;
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var express = require('express');
 var app = express();
+<<<<<<< HEAD
+=======
+var routes = require('./routes/index.js');
+>>>>>>> 6fba225... 1
 
 app.use(express.static(__dirname + '/public'));
 
