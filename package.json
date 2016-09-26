@@ -8,11 +8,11 @@
     "application",
     "openshift"
   ],
-  "author": {
+  "authors": [{
     "name": "Muxi Qi",
     "email": "qimuxi1990@gmail.com",
     "url": "http://www.linkedin.com/in/muxiqi"
-  },
+  }],
   "_homepage": "",
   "repository": {
     "type": "git",
@@ -31,5 +31,5 @@
   "bundleDependencies": [],
 
   "private": true,
-  "main": "app.js"
+  "main": "server.js"
 }
