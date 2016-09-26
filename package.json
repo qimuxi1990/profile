@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "Profile",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "Profile Static Application",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -9,11 +9,11 @@
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Muxi Qi",
+    "email": "qimuxi1990@gmail.com",
+    "url": "http://www.linkedin.com/in/muxiqi"
   },
-  "homepage": "http://www.openshift.com/",
+  "_homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/openshift/origin-server"
@@ -31,5 +31,5 @@
   "bundleDependencies": [],
 
   "private": true,
-  "main": "server.js"
+  "main": "app.js"
 }
