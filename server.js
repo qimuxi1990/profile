@@ -6,6 +6,8 @@ var routes = require('./routes/index.js');
 
 app.use(express.static(__dirname + '/public'));
 
+app.use('/', routes);
+
 app.listen(port, ip, function () {
   console.log('Example app listening on ' + ip + ':' + port + '!');
 });
