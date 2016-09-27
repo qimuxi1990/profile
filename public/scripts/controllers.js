@@ -2,9 +2,10 @@
 
 angular.module('profileApp')
 
-.controller('BodyController', ['$scope', 'profileService', function($scope, profileService){
+.controller('BodyController', ['$scope', 'panelService', 'profileService', function($scope, panelService, profileService){
 	$scope.user = {};
 	$scope.currentOrganization = {};
+	$scope.panels = panelService.getPanels();
 
 	$scope.user = profileService.getUser();
 	var dateSort = function(a, b) {
@@ -12,7 +13,6 @@ angular.module('profileApp')
 		if(!b.dateEnd) return 1;
 		return b.dateEnd - a.dateEnd;
 	}
-	console.log($scope.user.experience);
 	var experience = $scope.user.experience.sort(dateSort);
 	var educations = $scope.user.educations.sort(dateSort);
 	if(experience.length===0 || experience[0].dateEnd) {

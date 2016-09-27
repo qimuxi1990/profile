@@ -1,13 +1,19 @@
 <div class="container">
-    <div class="row row-content">
-        Hello World!
-    </div>
-
-    <div class="row row-content">
-        Hello OpenShift!
-    </div>
-
-    <div class="row row-content">
-        Hello Profile!
-    </div>
+	<div class="row">
+		<div class="panel panel-default col-xs-12 col-md-6 col-lg-4" ng-repeat="panel in panels" ng-if="user[panel._id]">
+			<div class="panel-body">
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href="#">
+							<img class="media-object img-rounded" ng-src="{{panel.image}}" alt="{{panel.name}}">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4>{{panel.name}} <span class="badge">{{user[panel._id].length}}</span></h5>
+						<p>{{panel.description}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

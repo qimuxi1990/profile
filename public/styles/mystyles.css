@@ -5,24 +5,37 @@ h1 {
 /** responsive image */
 /* xs */
 img.media-object {
+    width: 60px;
+    height: auto;
+}
+header img.media-object {
     width: 120px;
     height: auto;
 }
 /* sm */
 @media (min-width: 768px) {
     img.media-object {
+        width: 70px;
+    }
+    header img.media-object {
         width: 150px;
     }
 }
 /* md */
 @media (min-width: 992px) {
     img.media-object {
+        width: 100px;
+    }
+    header img.media-object {
         width: 200px;
     }
 }
 /* lg */
 @media (min-width: 1200px) {
     img.media-object {
+        width: 120px;
+    }
+    header img.media-object {
         width: 240px;
     }
 }
