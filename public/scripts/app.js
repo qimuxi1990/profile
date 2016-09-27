@@ -9,8 +9,7 @@ angular.module('profileApp', ['ui.router', 'ngResource'])
         url:'/',
         views: {
             'header': {
-                templateUrl : 'views/header.html',
-                controller: 'HeaderController'
+                templateUrl : 'views/header.html'
             },
             'content': {
                 templateUrl : 'views/home.html',

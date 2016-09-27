@@ -8,7 +8,8 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head 
 	content must come *after* these tags -->
 
-	<title>Profile</title>    
+	<title>Profile</title>
+	<link rel="icon" href="images/favicon.png" type="image/png" />
 	<!-- Bootstrap -->
 	<!-- build:css styles/main.css -->
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +27,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body ng-controller = "BodyController">
 	<div ui-view="header"></div>
 	<div ui-view="content"></div>
 	<div ui-view="footer"></div>

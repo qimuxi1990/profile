@@ -6,7 +6,7 @@
 	</div>
 </nav>         
 
-<header class="jumbotron" ng-controller="HeaderController">
+<header class="jumbotron">
 
 	<!-- Main component for a primary marketing message or call to action -->
 
@@ -18,13 +18,13 @@
 				<div class="media">
 					<div class="media-left media-middle">
 						<a href="#">
-						<img class="media-object" ng-src="{{user.avatar}}" alt="{{user.firstname + ' ' + user.lastname}}" height=120 width=120>
+						<img class="media-object" ng-src="{{user.avatar}}" alt="{{user.firstname + ' ' + user.lastname}}">
 						</a>
 					</div>
 					<div class="media-body">
 						<h2 class="media-heading">{{user.firstname + ' ' + user.lastname}}</h2>
-						<h4>{{user.experiences[0].title + ' at ' + user.experiences[0].company}}</h4>
-						<h5>{{user.address.city + ', ' + user.address.state + ' ' + user.address.zipcode + ' || ' + user.experiences[0].industry}}</h5>
+						<h4>{{currentOrganization.title + ' at ' + currentOrganization.organization}}</h4>
+						<h5>{{user.address.city + ', ' + user.address.state + ' ' + user.address.zipcode + ' || ' + currentOrganization.industry}}</h5>
 					</div>
 				</div>
 				<p style="padding:40px;"></p>
