@@ -17,7 +17,8 @@ angular.module('profileApp')
 		telephones: ['5088263287'], // required can empty
 		emails: ['mqi@wpi.edu', 'qimuxi1990@gmail.com'], // required can empty
 		// Career Fields
-		summary: 'Looking for full ', // required can empty
+		adviceForContacting: '', // not required
+		summary: 'I am looking for full time jobs related to the industry of Computer Engineering', // required can empty
 		experience: [{
 			title: 'Application Developer',
 			company: 'Diamond Diagnostics Inc.',
@@ -25,21 +26,31 @@ angular.module('profileApp')
 			dateStart: new Date('2016-08-01'),
 			dateEnd: null
 		}], // required can empty
-		educations: [], // required can empty
+		educations: [{
+			degree: "Master of Science",
+			major: "Electrical & Computer Engineering",
+			organization: "Worcester Polytechnic Institute",
+			department: "Electrical & Computer Engineering",
+			gpa: 4.0,
+			dateStart: new Date('2014-08-28'),
+			dateEnd: new Date('2016-05-21')
+		}], // required can empty
 		// Additional Career Fields
+		publications: [], // not required
 		projects: [], // not required
 		certifications: [], // not required
 		skills: [], // not required
 		courses: [], // required can empty based on education
-		volunteerInterests: [], // not required DISPLAY AS Volenteer
-		volunteerExperience: [], // not required DISPLAY AS Volenteer
-		volunteerOpportunities: [], // not required DISPLAY AS Volenteer
+		volunteer: {
+			interests: [],
+			experience: [],
+			opportunities: []
+		}, // not required
 		organizations: [], // not required
 		honorsAwards: [], // not required
 		testScores: [], // not required
 		patents: [], // not required
 		supportedOrganizations: [], // not required
-		publications: [], // not required
 		posts: [], // not required
 		// Personal Fields
 		languages: [{
@@ -56,7 +67,6 @@ angular.module('profileApp')
 			maritalStatus: 'Single', // not required
 		},
 		interests: [], // not required
-		adviceForContacting: '', // not required
 
 		// Networking Fields
 		connections: [], // required can empty
@@ -80,6 +90,11 @@ angular.module('profileApp')
 		image: "./images/avatar.jpg",
 		description: "Education history: post high school educations"
 	},{
+		_id: "publications",
+		name: "Publications",
+		image: "./images/avatar.jpg",
+		description: "Publications: all kinds, mostly career related"
+	},{
 		_id: "projects",
 		name: "Projects",
 		image: "./images/avatar.jpg",
@@ -91,94 +106,79 @@ angular.module('profileApp')
 		description: "Certifications: all levels"
 	},{
 		_id: "skills",
-		name: "Certifications",
+		name: "Skills",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Skills: all important skills, mostly career related"
 	},{
 		_id: "courses",
-		name: "Certifications",
+		name: "Cources",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Courses: all important courses, grouped by educations"
 	},{
-		_id: "volunteerInterests",
-		name: "Certifications",
+		_id: "volunteer",
+		name: "Volenteer",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
-	},{
-		_id: "volunteerExperience",
-		name: "Certifications",
-		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
-	},{
-		_id: "volunteerOpportunities",
-		name: "Certifications",
-		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Volenteer: all interests, experience and opportunities on volunteer"
 	},{
 		_id: "organizations",
-		name: "honorsAwards",
+		name: "Organizations",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Organizations: all kinds"
 	},{
 		_id: "honorsAwards",
-		name: "Certifications",
+		name: "Honors & Awards",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Honors & Awards: all kinds"
 	},{
 		_id: "testScores",
-		name: "Certifications",
+		name: "Test Scores",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Test Scores: all kinds, including language, professional and etc."
 	},{
 		_id: "patents",
-		name: "Certifications",
+		name: "Patents",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Patents: all kinds"
 	},{
 		_id: "supportedOrganizations",
-		name: "Certifications",
+		name: "Supported Organizations",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
-	},{
-		_id: "publications",
-		name: "Certifications",
-		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Supported Organizations: all kinds"
 	},{
 		_id: "posts",
-		name: "Certifications",
+		name: "Posts",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Posts: all important online posts, mostly career related"
 	},{
 		_id: "languages",
-		name: "Certifications",
+		name: "Languages",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Languages: all levels"
 	},{
 		_id: "additionalInformation",
-		name: "Certifications",
+		name: "Additional Information",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Additional Information: additional personal information"
 	},{
 		_id: "interests",
-		name: "Certifications",
+		name: "Interests",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Interests: personal interests"
 	},{
 		_id: "connections",
-		name: "Certifications",
+		name: "Connections",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Connections: people I connect"
 	},{
 		_id: "groups",
-		name: "Certifications",
+		name: "Groups",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Groups: groups I join"
 	},{
 		_id: "followings",
-		name: "Certifications",
+		name: "Followings",
 		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
+		description: "Followings: people I follow"
 	}];
 	this.getPanels = function(){
 		return panels;
