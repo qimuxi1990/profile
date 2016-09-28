@@ -29,26 +29,26 @@
 							<img class="media-object img-rounded" ng-src="{{user.avatar}}" alt="{{user.firstname + ' ' + user.lastname}}">
 						</a>
 					</div>
-					<div class="media-body">
+					<div class="media-body media-middle">
 						<h2 class="media-heading">{{user.firstname + ' ' + user.lastname}}</h2>
 						<h4>{{currentOrganization.title + ' at ' + currentOrganization.organization}}</h4>
 						<p>{{user.address.city + ', ' + user.address.state + ' ' + user.address.zipcode + ' || ' + currentOrganization.industry}}</p>
-						<table class="table table-condensed">
-							<tr ng-if="user.experience[0]">
-								<td>C<span class="hidden-sm hidden-xs">urrent</span>:</td>
-								<td>{{user.experience[0].company}}</td>
-							</tr>
-							<tr ng-if="user.experience[1]">
-								<td>P<span class="hidden-sm hidden-xs">revious</span>:</td>
-								<td>{{user.experience[1].company}}</td>
-							</tr>
-							<tr ng-if="user.educations[0]">
-								<td>E<span class="hidden-sm hidden-xs">ducation</span>:</td>
-								<td>{{user.educations[0].organization}}</td>
-							</tr>
-						</table>
 					</div>
 				</div>
+				<table class="table table-condensed">
+					<tr ng-if="user.experience[0]">
+						<td>C<span class="hidden-sm hidden-xs">urrent</span>:</td>
+						<td>{{user.experience[0].company}}</td>
+					</tr>
+					<tr ng-if="user.experience[1]">
+						<td>P<span class="hidden-sm hidden-xs">revious</span>:</td>
+						<td>{{user.experience[1].company}}</td>
+					</tr>
+					<tr ng-if="user.educations[0]">
+						<td>E<span class="hidden-sm hidden-xs">ducation</span>:</td>
+						<td>{{user.educations[0].organization}}</td>
+					</tr>
+				</table>
 				<blockquote>{{user.summary}}</blockquote>
 			</div>
 		</div>
