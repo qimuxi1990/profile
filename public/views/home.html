@@ -1,16 +1,76 @@
 <div class="container">
 	<div class="row">
-		<div class="panel panel-default col-xs-12 col-md-6 col-lg-4" ng-repeat="panel in panels" ng-if="user[panel._id]" ng-click="$state.go(panel.state)">
+		<!--div class="panel panel-default" ng-repeat="panel in panels" ng-if="user[panel._id]" ng-click="$state.go(panel.state)"-->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Experience
+			</div>
 			<div class="panel-body">
-				<div class="media">
-					<div class="media-left media-middle">
-						<img class="media-object img-rounded" ng-src="{{panel.image}}" alt="{{panel.name}}">
-					</div>
-					<div class="media-body">
-						<h4>{{panel.name}} <span class="badge">{{user[panel._id].length}}</span></h4>
-						<p>{{panel.description}}</p>
-					</div>
-				</div>
+				Full time
+			</div>
+			<div class="panel-body">
+				Internship
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Education
+			</div>
+			<div class="panel-body">
+				Master
+			</div>
+			<div class="panel-body">
+				Bachelor
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Skills
+			</div>
+			<div class="panel-body">
+				1
+			</div>
+			<div class="panel-body">
+				2
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Accomplishments
+			</div>
+			<div class="panel-body">
+				<div class="col-xs-12">Courses</div>
+			</div>
+			<div class="panel-body">
+				<div class="col-xs-12">Certificates</div>
+			</div>
+			<div class="panel-body">
+				<div class="col-xs-12">Projects</div>
+			</div>
+			<div class="panel-body">
+				<div class="col-xs-12">Languages</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Contact
+			</div>
+			<div class="panel-body">
+				1
+			</div>
+			<div class="panel-body">
+				2
+			</div>
+			<div class="panel-body">
+				3
 			</div>
 		</div>
 	</div>
