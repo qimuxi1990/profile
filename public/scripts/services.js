@@ -83,7 +83,8 @@ angular.module('profileApp')
 		_id: "experience",
 		name: "Experience",
 		image: "./images/avatar.jpg",
-		description: "Working experience: internship, co-op, part time and full time jobs"
+		description: "Working experience: internship, co-op, part time and full time jobs",
+		state: 'app.experience'
 	},{
 		_id: "educations",
 		name: "Educations",

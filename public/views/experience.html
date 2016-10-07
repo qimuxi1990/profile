@@ -1,6 +1,9 @@
 <div class="container">
 	<div class="row">
-		<div class="panel panel-default col-xs-12 col-md-6 col-lg-4" ng-repeat="panel in panels" ng-if="user[panel._id]" ng-click="$state.go(panel.state)">
+		<div class="panel panel-default col-xs-12 col-md-6 col-lg-4">
+			<div class="panel-heading">
+				<h3 class="panel-title">Experience</h3>
+			</div>
 			<div class="panel-body">
 				<div class="media">
 					<div class="media-left media-middle">
@@ -14,4 +17,11 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">...</p>
+  </a>
 </div>

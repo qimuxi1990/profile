@@ -2,7 +2,8 @@
 
 angular.module('profileApp')
 
-.controller('BodyController', ['$scope', 'panelService', 'profileService', function($scope, panelService, profileService){
+.controller('BodyController', ['$scope', '$state', 'panelService', 'profileService', function($scope, $state, panelService, profileService){
+	$scope.$state = $state;
 	$scope.user = {};
 	$scope.currentOrganization = {};
 	$scope.panels = panelService.getPanels();

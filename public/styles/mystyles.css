@@ -1,9 +1,12 @@
 /** body scrollbar always enabled */
-body    {overflow-y:scroll;}
+body    {
+    overflow-y:scroll;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
 
 /** heading font */
 h1 {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+	font-family: "Brush Script MT", cursive;;
 }
 /** responsive image */
 /* xs */
@@ -11,7 +14,7 @@ img.media-object {
     width: 60px;
     height: auto;
 }
-header img.media-object {
+_.thumbnail img {
     width: 120px;
     height: auto;
 }
