@@ -5,11 +5,17 @@
 			<div class="panel-heading">
 				Experience
 			</div>
-			<div class="panel-body">
-				Full time
-			</div>
-			<div class="panel-body">
-				Internship
+			<div class="panel-body" ng-repeat="experience in user.experience | orderBy: 'dateStart' : true | limitTo : 3">
+				<div class="media">
+					<div class="media-left media-middle">
+						<img class="media-object" ng-src="{{experience.logo}}" alt="{{experience.company}}">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{experience.title}}</h4>
+						<p>{{experience.company}}</p>
+						<p>{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -18,11 +24,17 @@
 			<div class="panel-heading">
 				Education
 			</div>
-			<div class="panel-body">
-				Master
-			</div>
-			<div class="panel-body">
-				Bachelor
+			<div class="panel-body" ng-repeat="education in user.educations | orderBy: 'dateStart' : true | limitTo : 3">
+				<div class="media">
+					<div class="media-left media-middle">
+						<img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{education.organization}}</h4>
+						<p>{{education.degree}}, {{education.major}}</p>
+						<p>{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

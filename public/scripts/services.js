@@ -14,34 +14,74 @@ angular.module('profileApp')
 			zipcode: '01701',
 			country: 'The United States of America'
 		}, // required can empty
-		telephones: ['5088263287'], // required can empty
-		emails: ['mqi@wpi.edu', 'qimuxi1990@gmail.com'], // required can empty
+		contact: [{
+			type: 'mobile',
+			value: '5088263287'
+		},{
+			type: 'email',
+			value: 'mqi@wpi.edu',
+			primary: true
+		},{
+			type: 'email',
+			value: 'qimuxi1990@gmail.com'
+		},{
+			type: 'website',
+			value: 'https://linkedin.com/in/qimuxi1990'
+		},{
+			type: 'website',
+			value: 'https://github.com/qimuxi1990'
+		}], // required not empty
 		// Career Fields
-		adviceForContacting: '', // not required
+		/*adviceForContacting: '', // not required*/
 		summary: 'I am looking for full time jobs related to the industry of Computer Engineering', // required can empty
+		position: 'Application Developer at Diamond Diagnostics', // required not empty
 		experience: [{
+			title: 'Engineering Intern',
+			discription: 'Content: Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
+			company: 'Beijing Lein Electronic Technology Co., LTD',
+			logo: './images/logo-default.png',
+			industry: 'Electronics',
+			dateStart: new Date('2016-07-01'),
+			dateEnd: new Date('2016-08-01')
+		},{
 			title: 'Application Developer',
+			discription: 'Objective: Perform Software/Program Development, Application Customization, Database/Reporting Development/Management, with tools like Mongo-Express-Angular-NodeJS, and SQL Server Reporting Services. Also complete any professional task or job function asked by the company. Content: Full-Stack App Development based on Mongo-Express-Angular-NodeJS and ElasticSearch, Reporting Development based on SQL Server Reporting Services and also Visual Studio Tools for Office.',
 			company: 'Diamond Diagnostics Inc.',
+			logo: './images/logo-default.png',
 			industry: 'Medical Devices',
 			dateStart: new Date('2016-08-01'),
 			dateEnd: null
 		}], // required can empty
 		educations: [{
-			degree: "Master of Science",
-			major: "Electrical & Computer Engineering",
-			organization: "Worcester Polytechnic Institute",
-			department: "Electrical & Computer Engineering",
+			degree: 'Bachelor of Engineering',
+			major: 'Electrics Technology and Information Science',
+			organization: 'Tsinghua University',
+			logo: './images/logo-tsinghuauniversity.png',
+			department: 'Electronics Engineering',
+			gpa: 3.0,
+			dateStart: new Date('2009-09-01'),
+			dateEnd: new Date('2014-07-14')
+		},{
+			degree: 'Master of Science',
+			major: 'Electrical & Computer Engineering',
+			organization: 'Worcester Polytechnic Institute',
+			logo: './images/logo-worcesterpolytechnicinstitute.png',
+			department: 'Electrical & Computer Engineering',
 			gpa: 4.0,
 			dateStart: new Date('2014-08-28'),
 			dateEnd: new Date('2016-05-21')
 		}], // required can empty
+		skills: ['Electrical Engineering',
+		'Computer Science',
+		'Signal Processing',
+		'Mobile Development',
+		'Database Management'], // required
 		// Additional Career Fields
-		publications: [], // not required
-		projects: [], // not required
-		certifications: [], // not required
-		skills: [], // not required
+		/*publications: [], // not required*/
 		courses: [], // required can empty based on education
-		volunteer: {
+		certifications: [], // not required
+		projects: [], // not required
+		/*volunteer: {
 			interests: [],
 			experience: [],
 			opportunities: []
@@ -51,7 +91,7 @@ angular.module('profileApp')
 		testScores: [], // not required
 		patents: [], // not required
 		supportedOrganizations: [], // not required
-		posts: [], // not required
+		posts: [], // not required*/
 		// Personal Fields
 		languages: [{
 			name: 'Chinese',
@@ -62,126 +102,18 @@ angular.module('profileApp')
 		}], // required
 		// Additional Personal Fields
 		// additionalInfo (DOB, Marital Status)
-		additionalInformation: {
+		/*additionalInformation: {
 			dateOfBirth: new Date('1990-05-26'), // not required
 			maritalStatus: 'Single', // not required
-		},
-		interests: [], // not required
+		},*/
+		/*interests: [], // not required*/
 
 		// Networking Fields
-		connections: [], // required can empty
+		/*connections: [], // required can empty
 		groups: [], // not required
-		followings: [] // not required
+		followings: [] // not required*/
 	};
 	this.getUser = function() {
 		return user;
 	};
-})
-
-.service('panelService', function(){
-	var panels = [{
-		_id: "experience",
-		name: "Experience",
-		image: "./images/avatar.jpg",
-		description: "Working experience: internship, co-op, part time and full time jobs",
-		state: 'app.experience'
-	},{
-		_id: "educations",
-		name: "Educations",
-		image: "./images/avatar.jpg",
-		description: "Education history: post high school educations"
-	},{
-		_id: "publications",
-		name: "Publications",
-		image: "./images/avatar.jpg",
-		description: "Publications: all kinds, mostly career related"
-	},{
-		_id: "projects",
-		name: "Projects",
-		image: "./images/avatar.jpg",
-		description: "Projects: group and independent"
-	},{
-		_id: "certifications",
-		name: "Certifications",
-		image: "./images/avatar.jpg",
-		description: "Certifications: all levels"
-	},{
-		_id: "skills",
-		name: "Skills",
-		image: "./images/avatar.jpg",
-		description: "Skills: all important skills, mostly career related"
-	},{
-		_id: "courses",
-		name: "Cources",
-		image: "./images/avatar.jpg",
-		description: "Courses: all important courses, grouped by educations"
-	},{
-		_id: "volunteer",
-		name: "Volenteer",
-		image: "./images/avatar.jpg",
-		description: "Volenteer: all interests, experience and opportunities on volunteer"
-	},{
-		_id: "organizations",
-		name: "Organizations",
-		image: "./images/avatar.jpg",
-		description: "Organizations: all kinds"
-	},{
-		_id: "honorsAwards",
-		name: "Honors & Awards",
-		image: "./images/avatar.jpg",
-		description: "Honors & Awards: all kinds"
-	},{
-		_id: "testScores",
-		name: "Test Scores",
-		image: "./images/avatar.jpg",
-		description: "Test Scores: all kinds, including language, professional and etc."
-	},{
-		_id: "patents",
-		name: "Patents",
-		image: "./images/avatar.jpg",
-		description: "Patents: all kinds"
-	},{
-		_id: "supportedOrganizations",
-		name: "Supported Organizations",
-		image: "./images/avatar.jpg",
-		description: "Supported Organizations: all kinds"
-	},{
-		_id: "posts",
-		name: "Posts",
-		image: "./images/avatar.jpg",
-		description: "Posts: all important online posts, mostly career related"
-	},{
-		_id: "languages",
-		name: "Languages",
-		image: "./images/avatar.jpg",
-		description: "Languages: all levels"
-	},{
-		_id: "additionalInformation",
-		name: "Additional Information",
-		image: "./images/avatar.jpg",
-		description: "Additional Information: additional personal information"
-	},{
-		_id: "interests",
-		name: "Interests",
-		image: "./images/avatar.jpg",
-		description: "Interests: personal interests"
-	},{
-		_id: "connections",
-		name: "Connections",
-		image: "./images/avatar.jpg",
-		description: "Connections: people I connect"
-	},{
-		_id: "groups",
-		name: "Groups",
-		image: "./images/avatar.jpg",
-		description: "Groups: groups I join"
-	},{
-		_id: "followings",
-		name: "Followings",
-		image: "./images/avatar.jpg",
-		description: "Followings: people I follow"
-	}];
-	this.getPanels = function(){
-		return panels;
-	}
 });
