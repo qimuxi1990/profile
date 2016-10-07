@@ -20,6 +20,14 @@ angular.module('profileApp', ['ui.router', 'ngResource'])
             }
         }
     })
+    .state('app.experience', {
+        url:'experience',
+        views: {
+            'content@': {
+                templateUrl: 'views/experience.html',
+            }
+        }
+    });
     // route for the aboutus page
     // .state('app.aboutus', {
     //     url:'aboutus',
@@ -31,4 +39,4 @@ angular.module('profileApp', ['ui.router', 'ngResource'])
     //     }
     // })
     $urlRouterProvider.otherwise('/');
-})
+});
