@@ -15,20 +15,24 @@ angular.module('profileApp')
 			country: 'The United States of America'
 		}, // required can empty
 		contact: [{
-			type: 'mobile',
+			category: 'mobile',
 			value: '5088263287'
 		},{
-			type: 'email',
+			category: 'email',
+			subCat: 'work',
 			value: 'mqi@wpi.edu',
 			primary: true
 		},{
-			type: 'email',
+			category: 'email',
+			subCat: 'personal',
 			value: 'qimuxi1990@gmail.com'
 		},{
-			type: 'website',
+			category: 'website',
+			subCat: 'Linkedin',
 			value: 'https://linkedin.com/in/qimuxi1990'
 		},{
-			type: 'website',
+			category: 'website',
+			subCat: 'Github',
 			value: 'https://github.com/qimuxi1990'
 		}], // required not empty
 		// Career Fields
@@ -71,15 +75,29 @@ angular.module('profileApp')
 			dateStart: new Date('2014-08-28'),
 			dateEnd: new Date('2016-05-21')
 		}], // required can empty
-		skills: ['Electrical Engineering',
-		'Computer Science',
-		'Signal Processing',
-		'Mobile Development',
-		'Database Management'], // required
+		skills: [{
+			name: 'Electrical Engineering',
+			endorsment: 3
+		},{
+			name: 'Computer Science',
+			endorsment: 3
+		},{
+			name: 'Signal Processing',
+			endorsment: 5
+		},{
+			name: 'Data Science',
+			endorsment: 1
+		},{
+			name: 'Databases',
+			endorsment: 1
+		}], // required
 		// Additional Career Fields
 		/*publications: [], // not required*/
-		courses: [], // required can empty based on education
-		certifications: [], // not required
+		courses: [{
+			name: 'course 1',
+			education: 2
+		}], // required can empty based on education
+		certificates: [], // not required
 		projects: [], // not required
 		/*volunteer: {
 			interests: [],

@@ -17,6 +17,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="panel-footer text-center">
+				<a href="#">Show More</a>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -36,6 +39,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="panel-footer text-center">
+				<a href="#">Show More</a>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -43,11 +49,11 @@
 			<div class="panel-heading">
 				Skills
 			</div>
-			<div class="panel-body">
-				1
+			<div class="panel-body" ng-repeat="skill in user.skills | orderBy: 'endorsement' : true | limitTo : 5">
+				{{skill.name}}
 			</div>
-			<div class="panel-body">
-				2
+			<div class="panel-footer text-center">
+				<a href="#">Show More</a>
 			</div>
 		</div>
 	</div>
@@ -57,16 +63,32 @@
 				Accomplishments
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-12">Courses</div>
+				<div class="col-xs-2"><h3>{{user.courses.length}}</h3></div>
+				<div class="col-xs-10">
+					<h4><a href="">Courses</a></h4>
+					<p><span ng-repeat="course in user.courses | limitTo: 1">{{course.name | limitTo: 128}}</span></p>
+				</div>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-12">Certificates</div>
+				<div class="col-xs-2"><h3>{{user.certificates.length}}</h3></div>
+				<div class="col-xs-10">
+					<h4><a href="">Certificates</a></h4>
+					<p><span ng-repeat="certificate in user.certificates | limitTo: 1">{{certificate.title | limitTo: 128}}</span></p>
+				</div>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-12">Projects</div>
+				<div class="col-xs-2"><h3>{{user.projects.length}}</h3></div>
+				<div class="col-xs-10">
+					<h4><a href="">Projects</a></h4>
+					<p><span ng-repeat="project in user.projects | limitTo: 1">{{project.title | limitTo: 128}}</span></p>
+				</div>
 			</div>
 			<div class="panel-body">
-				<div class="col-xs-12">Languages</div>
+				<div class="col-xs-2"><h3>{{user.languages.length}}</h3></div>
+				<div class="col-xs-10">
+					<h4><a href="">Languages</a></h4>
+					<p><span ng-repeat="language in user.languages | limitTo: 3">{{language.name | limitTo: 32}} </span></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -75,14 +97,21 @@
 			<div class="panel-heading">
 				Contact
 			</div>
-			<div class="panel-body">
-				1
-			</div>
-			<div class="panel-body">
-				2
-			</div>
-			<div class="panel-body">
-				3
+			<div class="panel-body" ng-repeat="contact in user.contact | orderBy : 'category'">
+				<div class="col-xs-2">
+					<h3>
+						<i class="fa fa-fw fa-mobile-phone" ng-if="contact.category == 'mobile'"></i>
+						<i class="fa fa-fw fa-phone" ng-if="contact.category == 'phone'"></i>
+						<i class="fa fa-fw fa-envelope" ng-if="contact.category == 'email'"></i>
+						<i class="fa fa-fw fa-link" ng-if="contact.category == 'website'"></i>
+					</h3>
+				</div>
+				<div class="col-xs-10">
+					<h4>{{contact.subCat ? contact.subCat : contact.category}}</h4>
+					<p>
+						<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}">{{contact.value}}</a>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

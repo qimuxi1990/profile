@@ -11,3 +11,6 @@ h1 {
 .panel-body {
     font-family: Verdana, Geneva, sans-serif;
 }
+
+/** word-wrap */
+.panel { word-wrap: break-word; }
