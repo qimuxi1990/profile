@@ -5,22 +5,24 @@
 			<div class="panel-heading">
 				Experience
 			</div>
-			<div class="panel-body" ng-repeat="experience in user.experience | orderBy: 'dateStart' : true | limitTo : 3">
-				<div class="media">
-					<div class="media-left media-middle">
-						<img class="media-object" ng-src="{{experience.logo}}" alt="{{experience.company}}">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="experience in user.experience | orderBy: 'dateStart' : true | limitTo : 3">
+					<div class="media">
+						<div class="media-left media-middle">
+							<img class="media-object" ng-src="{{experience.logo}}" alt="{{experience.company}}" />
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">{{experience.title}}</h4>
+							<p>
+								{{experience.company}}<br />
+								{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}
+							</p>
+						</div>
 					</div>
-					<div class="media-body">
-						<h4 class="media-heading">{{experience.title}}</h4>
-						<p>
-							{{experience.company}}<br />
-							{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}
-						</p>
-					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
 			<div class="panel-footer text-center">
-				<a ui-sref="app.experience">Show More</a>
+				<a ui-sref="app.experience">See More</a>
 			</div>
 		</div>
 	</div>
@@ -29,22 +31,24 @@
 			<div class="panel-heading">
 				Education
 			</div>
-			<div class="panel-body" ng-repeat="education in user.educations | orderBy: 'dateStart' : true | limitTo : 3">
-				<div class="media">
-					<div class="media-left media-middle">
-						<img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="education in user.educations | orderBy: 'dateStart' : true | limitTo : 3">
+					<div class="media">
+						<div class="media-left media-middle">
+							<img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}" />
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">{{education.organization}}</h4>
+							<p>
+								{{education.degree}}, {{education.major}}<br />
+								{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
+							</p>
+						</div>
 					</div>
-					<div class="media-body">
-						<h4 class="media-heading">{{education.organization}}</h4>
-						<p>
-							{{education.degree}}, {{education.major}}<br />
-							{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
-						</p>
-					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
 			<div class="panel-footer text-center">
-				<a href="#">Show More</a>
+				<a ui-sref="app.educations">See More</a>
 			</div>
 		</div>
 	</div>
@@ -53,11 +57,13 @@
 			<div class="panel-heading">
 				Skills
 			</div>
-			<div class="panel-body" ng-repeat="skill in user.skills | orderBy: 'endorsement' : true | limitTo : 5">
-				{{skill.name}}
-			</div>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="skill in user.skills | orderBy: 'endorsement' : true | limitTo : 5">
+					{{skill.name}}
+				</li>
+			</ul>
 			<div class="panel-footer text-center">
-				<a href="#">Show More</a>
+				<a ui-sref="app.skills">See More</a>
 			</div>
 		</div>
 	</div>
@@ -66,34 +72,44 @@
 			<div class="panel-heading">
 				Accomplishments
 			</div>
-			<div class="panel-body">
-				<div class="col-xs-2"><h3>{{user.courses.length}}</h3></div>
-				<div class="col-xs-10">
-					<h4><a href="">Courses</a></h4>
-					<p><span ng-repeat="course in user.courses | limitTo: 1">{{course.name | limitTo: 128}}</span></p>
-				</div>
-			</div>
-			<div class="panel-body">
-				<div class="col-xs-2"><h3>{{user.certificates.length}}</h3></div>
-				<div class="col-xs-10">
-					<h4><a href="">Certificates</a></h4>
-					<p><span ng-repeat="certificate in user.certificates | limitTo: 1">{{certificate.title | limitTo: 128}}</span></p>
-				</div>
-			</div>
-			<div class="panel-body">
-				<div class="col-xs-2"><h3>{{user.projects.length}}</h3></div>
-				<div class="col-xs-10">
-					<h4><a href="">Projects</a></h4>
-					<p><span ng-repeat="project in user.projects | limitTo: 1">{{project.title | limitTo: 128}}</span></p>
-				</div>
-			</div>
-			<div class="panel-body">
-				<div class="col-xs-2"><h3>{{user.languages.length}}</h3></div>
-				<div class="col-xs-10">
-					<h4><a href="">Languages</a></h4>
-					<p><span ng-repeat="language in user.languages | limitTo: 3">{{language.name | limitTo: 32}} </span></p>
-				</div>
-			</div>
+			<ul class="list-group">
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-2 text-center"><h3>{{user.courses.length}}</h3></div>
+						<div class="col-xs-10">
+							<h4><a ui-sref="app.courses">Courses</a></h4>
+							<p><span ng-repeat="course in user.courses | limitTo: 1">{{course.name | limitTo: 128}}</span></p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-2 text-center"><h3>{{user.certificates.length}}</h3></div>
+						<div class="col-xs-10">
+							<h4><a ui-sref="app.certificates">Certificates</a></h4>
+							<p><span ng-repeat="certificate in user.certificates | limitTo: 1">{{certificate.title | limitTo: 128}}</span></p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-2 text-center"><h3>{{user.projects.length}}</h3></div>
+						<div class="col-xs-10">
+							<h4><a ui-sref="app.projects">Projects</a></h4>
+							<p><span ng-repeat="project in user.projects | limitTo: 1">{{project.title | limitTo: 128}}</span></p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-xs-2 text-center"><h3>{{user.languages.length}}</h3></div>
+						<div class="col-xs-10">
+							<h4><a ui-sref="app.languages">Languages</a></h4>
+							<p><span ng-repeat="language in user.languages | limitTo: 3">{{language.name | limitTo: 32}} </span></p>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<div class="row">
@@ -101,22 +117,26 @@
 			<div class="panel-heading">
 				Contact
 			</div>
-			<div class="panel-body" ng-repeat="contact in user.contact | orderBy : 'category'">
-				<div class="col-xs-2">
-					<h3>
-						<i class="fa fa-fw fa-mobile-phone" ng-if="contact.category == 'mobile'"></i>
-						<i class="fa fa-fw fa-phone" ng-if="contact.category == 'phone'"></i>
-						<i class="fa fa-fw fa-envelope" ng-if="contact.category == 'email'"></i>
-						<i class="fa fa-fw fa-link" ng-if="contact.category == 'website'"></i>
-					</h3>
-				</div>
-				<div class="col-xs-10">
-					<h4>{{contact.subCat ? contact.subCat : contact.category}}</h4>
-					<p>
-						<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}">{{contact.value}}</a>
-					</p>
-				</div>
-			</div>
+			<ul class="list-group">
+				<li class="list-group-item">
+					<div class="row" ng-repeat="contact in user.contact | orderBy : 'category'">
+						<div class="col-xs-2 text-center">
+							<h3>
+								<i class="fa fa-fw fa-mobile-phone" ng-if="contact.category == 'mobile'"></i>
+								<i class="fa fa-fw fa-phone" ng-if="contact.category == 'phone'"></i>
+								<i class="fa fa-fw fa-envelope" ng-if="contact.category == 'email'"></i>
+								<i class="fa fa-fw fa-link" ng-if="contact.category == 'website'"></i>
+							</h3>
+						</div>
+						<div class="col-xs-10">
+							<h4>{{contact.subCat ? contact.subCat : contact.category}}</h4>
+							<p>
+								<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}">{{contact.value}}</a>
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

@@ -97,9 +97,26 @@ angular.module('profileApp')
 		/*publications: [], // not required*/
 		courses: [{
 			name: 'course 1',
-			education: 2
+			organization: 'Tsinghua University'
+		},{
+			name: 'course 2',
+			organization: 'Worcester Polytechnic Institute'
 		}], // required can empty based on education
-		certificates: [], // not required
+		certificates: [{
+			title: 'Introduction to HTML5',
+			license: '',
+			organization: 'Coursera Course Certificates',
+			logo: './images/logo-coursera.png',
+			date: new Date('2015-09-01'),
+			url: 'http://www.google.com'
+		},{
+			title: 'Introduction to HTML5',
+			license: '',
+			organization: 'Coursera Course Certificates',
+			logo: './images/logo-coursera.png',
+			date: new Date('2015-09-01'),
+			url: 'http://www.google.com'
+		}], // not required
 		projects: [], // not required
 		/*volunteer: {
 			interests: [],

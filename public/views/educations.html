@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="pull-right" ui-sref="app"><i class="fa fa-chevron-left"></i> Back</a>
+                <h3 class="panel-title">Educations</h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="education in user.educations | orderBy: 'dateStart' : true">
+                    <div class="media">
+                        <div class="media-left media-top">
+                            <img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}" />
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{education.organization}}</h4>
+                            <p>
+                                {{education.degree}}, {{education.major}}<br />
+                                {{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
+                            </p>
+                        </div>
+                    </div>
+                    <p ng-bind-html="education.description">
+                    </p>
+                </li>
+            </ul>
+            <div class="panel-footer text-center">
+                <a ui-sref="app"><i class="fa fa-chevron-left"></i> Back</a>
+            </div>
+        </div>
+    </div>
+</div>
