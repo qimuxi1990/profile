@@ -41,16 +41,18 @@ angular.module('profileApp')
 		position: 'Application Developer at Diamond Diagnostics', // required not empty
 		experience: [{
 			title: 'Engineering Intern',
-			discription: 'Content: Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
+			description: '<u>Content:</u> Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
 			company: 'Beijing Lein Electronic Technology Co., LTD',
+			address: '1 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
 			logo: './images/logo-default.png',
 			industry: 'Electronics',
 			dateStart: new Date('2016-07-01'),
 			dateEnd: new Date('2016-08-01')
 		},{
 			title: 'Application Developer',
-			discription: 'Objective: Perform Software/Program Development, Application Customization, Database/Reporting Development/Management, with tools like Mongo-Express-Angular-NodeJS, and SQL Server Reporting Services. Also complete any professional task or job function asked by the company. Content: Full-Stack App Development based on Mongo-Express-Angular-NodeJS and ElasticSearch, Reporting Development based on SQL Server Reporting Services and also Visual Studio Tools for Office.',
+			description: '<u>Objective</u>: Perform Software/Program Development, Application Customization, Database/Reporting Development/Management, with tools like Mongo-Express-Angular-NodeJS, and SQL Server Reporting Services. Also complete any professional task or job function asked by the company.<br /><u>Content:</u> Full-Stack App Development based on Mongo-Express-Angular-NodeJS and ElasticSearch, Reporting Development based on SQL Server Reporting Services and also Visual Studio Tools for Office.',
 			company: 'Diamond Diagnostics Inc.',
+			address: '333 Fiske ST, Hollistion, MA 01701',
 			logo: './images/logo-default.png',
 			industry: 'Medical Devices',
 			dateStart: new Date('2016-08-01'),

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('profileApp', ['ui.router', 'ngResource'])
+angular.module('profileApp', ['ui.router', 'ngResource', 'ngSanitize'])
 
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider

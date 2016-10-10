@@ -12,13 +12,15 @@
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">{{experience.title}}</h4>
-						<p>{{experience.company}}</p>
-						<p>{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}</p>
+						<p>
+							{{experience.company}}<br />
+							{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}
+						</p>
 					</div>
 				</div>
 			</div>
 			<div class="panel-footer text-center">
-				<a href="#">Show More</a>
+				<a ui-sref="app.experience">Show More</a>
 			</div>
 		</div>
 	</div>
@@ -34,8 +36,10 @@
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">{{education.organization}}</h4>
-						<p>{{education.degree}}, {{education.major}}</p>
-						<p>{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}</p>
+						<p>
+							{{education.degree}}, {{education.major}}<br />
+							{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
+						</p>
 					</div>
 				</div>
 			</div>
