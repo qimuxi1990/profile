@@ -6,7 +6,7 @@
                 <h3 class="panel-title">Skills</h3>
             </div>
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="skill in user.skills | orderBy: 'endorsement' : true">
+                <li class="list-group-item" ng-repeat="skill in user.skills | orderBy: ['-endorsement', 'name']">
                     {{skill.name}}
                 </li>
             </ul>
