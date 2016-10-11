@@ -6,22 +6,12 @@
 				<h3 class="panel-title">Projects</h3>
 			</div>
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="experience in user.experience | orderBy: 'dateStart' : true">
-					<div class="media">
-						<div class="media-left media-top">
-							<img class="media-object" ng-src="{{experience.logo}}" alt="{{experience.company}}" />
-						</div>
-						<div class="media-body">
-							<h4 class="media-heading">{{experience.title}}</h4>
-							<p>
-								{{experience.company}}<br />
-								{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}<br />
-								{{experience.address}}
-							</p>
-						</div>
-					</div>
-					<p ng-bind-html="experience.description">
+				<li class="list-group-item" ng-repeat="project in user.projects | orderBy: 'dateStart' : true">
+					<h4 class="media-heading">{{project.name}}</h4>
+					<p ng-bind-html="project.description">
 					</p>
+					<p>{{project.dateStart | date : 'yyyy MMM'}} - {{(project.dateEnd | date : 'yyyy MMM') || 'Present'}}</p>
+					<p>{{project.member.join(', ')}}</p>
 				</li>
 			</ul>
 			<div class="panel-footer text-center">

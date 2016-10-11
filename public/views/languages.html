@@ -6,22 +6,9 @@
 				<h3 class="panel-title">Languages</h3>
 			</div>
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="experience in user.experience | orderBy: 'dateStart' : true">
-					<div class="media">
-						<div class="media-left media-top">
-							<img class="media-object" ng-src="{{experience.logo}}" alt="{{experience.company}}" />
-						</div>
-						<div class="media-body">
-							<h4 class="media-heading">{{experience.title}}</h4>
-							<p>
-								{{experience.company}}<br />
-								{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}<br />
-								{{experience.address}}
-							</p>
-						</div>
-					</div>
-					<p ng-bind-html="experience.description">
-					</p>
+				<li class="list-group-item" ng-repeat="language in user.languages | orderBy: 'proficiency' : true">
+					<h4 class="media-heading">{{language.name}}</h4>
+					<p>{{language.proficiency}}</p>
 				</li>
 			</ul>
 			<div class="panel-footer text-center">

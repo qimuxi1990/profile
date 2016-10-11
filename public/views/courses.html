@@ -6,9 +6,9 @@
 				<h3 class="panel-title">Courses</h3>
 			</div>
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="course in user.courses | orderBy: 'organization'">
+				<li class="list-group-item" ng-repeat="course in user.courses | orderBy: ['associateSchool','name']">
 					<h4>{{course.name}}</h4>
-					<p>{{course.organization}}</p>
+					<p>{{course.associateSchool}}</p>
 				</li>
 			</ul>
 			<div class="panel-footer text-center">

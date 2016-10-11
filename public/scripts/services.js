@@ -43,7 +43,7 @@ angular.module('profileApp')
 			title: 'Engineering Intern',
 			description: '<u>Content:</u> Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
 			company: 'Beijing Lein Electronic Technology Co., LTD',
-			address: '1 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
+			location: '1 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
 			logo: './images/logo-default.png',
 			industry: 'Electronics',
 			dateStart: new Date('2016-07-01'),
@@ -52,7 +52,7 @@ angular.module('profileApp')
 			title: 'Application Developer',
 			description: '<u>Objective</u>: Perform Software/Program Development, Application Customization, Database/Reporting Development/Management, with tools like Mongo-Express-Angular-NodeJS, and SQL Server Reporting Services. Also complete any professional task or job function asked by the company.<br /><u>Content:</u> Full-Stack App Development based on Mongo-Express-Angular-NodeJS and ElasticSearch, Reporting Development based on SQL Server Reporting Services and also Visual Studio Tools for Office.',
 			company: 'Diamond Diagnostics Inc.',
-			address: '333 Fiske ST, Hollistion, MA 01746',
+			location: '333 Fiske ST, Hollistion, MA 01746',
 			logo: './images/logo-default.png',
 			industry: 'Medical Devices',
 			dateStart: new Date('2016-08-01'),
@@ -60,22 +60,22 @@ angular.module('profileApp')
 		}], // required can empty
 		educations: [{
 			degree: 'Bachelor of Engineering (B.E.)',
-			major: 'Electronics Information Science and Technology',
+			fieldOfStudy: 'Electronics Information Science and Technology',
 			description: '2 years in Department of Physics. 3 years in Department of Electronic Engineering. <br />3 months research on Border Detection of ID Card Photos Taken by Mobile Phones as graduation project. <br />3 months assist researching on Visible Light Communication within Short Range in Optical Wireless Information System Lab (OWISYS).<br />3 months assist applying Compressed Sensing to Underwater Sensor in Research Institute of High-Speed Signal Processing And Network Transmission. <br />1 year plan, organize and promote students\' activities in class.',
-			organization: 'Tsinghua University',
+			school: 'Tsinghua University',
 			logo: './images/logo-tsinghuauniversity.png',
 			department: 'Electronics Engineering',
-			gpa: 3.0,
+			grade: 3.0,
 			dateStart: new Date('2009-09-01'),
 			dateEnd: new Date('2014-07-14')
 		},{
 			degree: 'Master of Science (M.S.)',
-			major: 'Electrical and Electronics Engineering',
+			fieldOfStudy: 'Electrical and Electronics Engineering',
 			description: '2 years in Department of Electrical and Computer Engineering.<br />1 year research on extracted feature analysis for improving AlcoGait prediction accuracy as thesis project.',
-			organization: 'Worcester Polytechnic Institute',
+			school: 'Worcester Polytechnic Institute',
 			logo: './images/logo-worcesterpolytechnicinstitute.png',
 			department: 'Electrical and Electronics Engineering',
-			gpa: 4.0,
+			grade: 4.0,
 			dateStart: new Date('2014-08-28'),
 			dateEnd: new Date('2016-05-21')
 		}], // required can empty
@@ -174,27 +174,45 @@ angular.module('profileApp')
 		/*publications: [], // not required*/
 		courses: [{
 			name: 'course 1',
-			organization: 'Tsinghua University'
+			associateSchool: 'Tsinghua University'
 		},{
 			name: 'course 2',
-			organization: 'Worcester Polytechnic Institute'
+			associateSchool: 'Worcester Polytechnic Institute'
 		}], // required can empty based on education
 		certificates: [{
-			title: 'Introduction to HTML5',
-			license: '',
-			organization: 'Coursera Course Certificates',
+			name: 'Introduction to HTML5',
+			license: '8DLERMS2M2M3',
+			authority: 'Coursera Verified Certificates',
 			logo: './images/logo-coursera.png',
-			date: new Date('2015-09-01'),
-			url: 'http://www.google.com'
+			dateStart: new Date('2015-09-01'),
+			dateEnd: null,
+			url: 'https://www.coursera.org/account/accomplishments/certificate/8DLERMS2M2M3'
 		},{
-			title: 'Introduction to HTML5',
-			license: '',
-			organization: 'Coursera Course Certificates',
+			name: 'HTML, CSS and JavaScript',
+			license: 'PEWBH5HJJRX8',
+			authority: 'Coursera Verified Certificates',
 			logo: './images/logo-coursera.png',
-			date: new Date('2015-09-01'),
-			url: 'http://www.google.com'
+			dateStart: new Date('2015-10-01'),
+			dateEnd: null,
+			url: 'https://www.coursera.org/account/accomplishments/certificate/PEWBH5HJJRX8'
 		}], // not required
-		projects: [], // not required
+		projects: [{
+			name: 'A Comprehensive Comparative Performance Evaluation of Signal Processing Features in Detecting Alcohol Consumption from Gait Data',
+			occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
+			description: '<u>Team and Objective:</u> Work under instructions from advisor to improve accuracy of existing project AlcoGait by applying new features, new extraction method involving DSP, and correlation analysis<br /><u>Content:</u> Implement 27 features in MATLAB code, extract these features from data set, calculate correlation between feature and prediction and find 22 better ones, also analyze their performance in different machine learning classifiers.',
+			member: ['Muxi Qi', 'Emmanuel Agu'],
+			dateStart: new Date(),
+			dateEnd: new Date(),
+			url: ''
+		},{
+			name: 'A Comprehensive Comparative Performance Evaluation of Signal Processing Features in Detecting Alcohol Consumption from Gait Data',
+			occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
+			description: '<u>Team and Objective:</u> Work under instructions from advisor to improve accuracy of existing project AlcoGait by applying new features, new extraction method involving DSP, and correlation analysis<br /><u>Content:</u> Implement 27 features in MATLAB code, extract these features from data set, calculate correlation between feature and prediction and find 22 better ones, also analyze their performance in different machine learning classifiers.',
+			member: ['Muxi Qi', 'Emmanuel Agu'],
+			dateStart: new Date(),
+			dateEnd: new Date(),
+			url: ''
+		}], // not required
 		/*volunteer: {
 			interests: [],
 			experience: [],
@@ -209,10 +227,10 @@ angular.module('profileApp')
 		// Personal Fields
 		languages: [{
 			name: 'Chinese',
-			level: 'native'
+			proficiency: 'native or bilingual proficiency'
 		},{
 			name: 'English',
-			level: 'intermediate'
+			proficiency: 'limited working proficiency'
 		}], // required
 		// Additional Personal Fields
 		// additionalInfo (DOB, Marital Status)

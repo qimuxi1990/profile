@@ -8,4 +8,9 @@ angular.module('profileApp')
 	$scope.currentOrganization = {};
 
 	$scope.user = profileService.getUser();
+    
+    $scope.nameArray = function(currentValue, index, array){
+        return currentValue.name;
+    };
+
 }]);

@@ -9,12 +9,12 @@
                 <li class="list-group-item" ng-repeat="education in user.educations | orderBy: 'dateStart' : true">
                     <div class="media">
                         <div class="media-left media-top">
-                            <img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}" />
+                            <img class="media-object" ng-src="{{education.logo}}" alt="{{education.school}}" />
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">{{education.organization}}</h4>
+                            <h4 class="media-heading">{{education.school}}</h4>
                             <p>
-                                {{education.degree}}, {{education.major}}<br />
+                                {{education.degree}}, {{education.fieldOfStudy}}<br />
                                 {{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
                             </p>
                         </div>

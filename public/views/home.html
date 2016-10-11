@@ -35,12 +35,12 @@
 				<li class="list-group-item" ng-repeat="education in user.educations | orderBy: 'dateStart' : true | limitTo : 3">
 					<div class="media">
 						<div class="media-left media-middle">
-							<img class="media-object" ng-src="{{education.logo}}" alt="{{education.organization}}" />
+							<img class="media-object" ng-src="{{education.logo}}" alt="{{education.school}}" />
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">{{education.organization}}</h4>
+							<h4 class="media-heading">{{education.school}}</h4>
 							<p>
-								{{education.degree}}, {{education.major}}<br />
+								{{education.degree}}, {{education.fieldOfStudy}}<br />
 								{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
 							</p>
 						</div>
@@ -78,7 +78,7 @@
 						<div class="col-xs-2 text-center"><h3>{{user.courses.length}}</h3></div>
 						<div class="col-xs-10">
 							<h4><a ui-sref="app.courses">Courses</a></h4>
-							<p><span ng-repeat="course in user.courses | limitTo: 1">{{course.name | limitTo: 128}}</span></p>
+							<p>{{user.courses.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
 					</div>
 				</li>
@@ -87,7 +87,7 @@
 						<div class="col-xs-2 text-center"><h3>{{user.certificates.length}}</h3></div>
 						<div class="col-xs-10">
 							<h4><a ui-sref="app.certificates">Certificates</a></h4>
-							<p><span ng-repeat="certificate in user.certificates | limitTo: 1">{{certificate.title | limitTo: 128}}</span></p>
+							<p>{{user.certificates.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
 					</div>
 				</li>
@@ -96,7 +96,7 @@
 						<div class="col-xs-2 text-center"><h3>{{user.projects.length}}</h3></div>
 						<div class="col-xs-10">
 							<h4><a ui-sref="app.projects">Projects</a></h4>
-							<p><span ng-repeat="project in user.projects | limitTo: 1">{{project.title | limitTo: 128}}</span></p>
+							<p>{{user.projects.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
 					</div>
 				</li>
@@ -105,7 +105,7 @@
 						<div class="col-xs-2 text-center"><h3>{{user.languages.length}}</h3></div>
 						<div class="col-xs-10">
 							<h4><a ui-sref="app.languages">Languages</a></h4>
-							<p><span ng-repeat="language in user.languages | limitTo: 3">{{language.name | limitTo: 32}} </span></p>
+							<p>{{user.languages.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
 					</div>
 				</li>
@@ -131,7 +131,7 @@
 						<div class="col-xs-10">
 							<h4>{{contact.subCat ? contact.subCat : contact.category}}</h4>
 							<p>
-								<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}">{{contact.value}}</a>
+								<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}" target="_blank">{{contact.value}}</a>
 							</p>
 						</div>
 					</div>
