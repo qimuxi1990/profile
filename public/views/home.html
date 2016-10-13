@@ -75,8 +75,8 @@
 			<ul class="list-group">
 				<li class="list-group-item">
 					<div class="row">
-						<div class="col-xs-2 text-center"><h3>{{user.courses.length}}</h3></div>
-						<div class="col-xs-10">
+						<div class="col-xs-2 col-sm-1 text-center"><h3>{{user.courses.length}}</h3></div>
+						<div class="col-xs-10 col-sm-11">
 							<h4><a ui-sref="app.courses">Courses</a></h4>
 							<p>{{user.courses.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
@@ -84,8 +84,8 @@
 				</li>
 				<li class="list-group-item">
 					<div class="row">
-						<div class="col-xs-2 text-center"><h3>{{user.certificates.length}}</h3></div>
-						<div class="col-xs-10">
+						<div class="col-xs-2 col-sm-1 text-center"><h3>{{user.certificates.length}}</h3></div>
+						<div class="col-xs-10 col-sm-11">
 							<h4><a ui-sref="app.certificates">Certificates</a></h4>
 							<p>{{user.certificates.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
@@ -93,8 +93,8 @@
 				</li>
 				<li class="list-group-item">
 					<div class="row">
-						<div class="col-xs-2 text-center"><h3>{{user.projects.length}}</h3></div>
-						<div class="col-xs-10">
+						<div class="col-xs-2 col-sm-1 text-center"><h3>{{user.projects.length}}</h3></div>
+						<div class="col-xs-10 col-sm-11">
 							<h4><a ui-sref="app.projects">Projects</a></h4>
 							<p>{{user.projects.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
@@ -102,8 +102,8 @@
 				</li>
 				<li class="list-group-item">
 					<div class="row">
-						<div class="col-xs-2 text-center"><h3>{{user.languages.length}}</h3></div>
-						<div class="col-xs-10">
+						<div class="col-xs-2 col-sm-1 text-center"><h3>{{user.languages.length}}</h3></div>
+						<div class="col-xs-10 col-sm-11">
 							<h4><a ui-sref="app.languages">Languages</a></h4>
 							<p>{{user.languages.map(nameArray).join(', ') | limitTo: 140}}</p>
 						</div>
@@ -120,7 +120,7 @@
 			<ul class="list-group">
 				<li class="list-group-item">
 					<div class="row" ng-repeat="contact in user.contact | orderBy : 'category'">
-						<div class="col-xs-2 text-center">
+						<div class="col-xs-2 col-sm-1 text-center">
 							<h3>
 								<i class="fa fa-fw fa-mobile-phone" ng-if="contact.category == 'mobile'"></i>
 								<i class="fa fa-fw fa-phone" ng-if="contact.category == 'phone'"></i>
@@ -128,7 +128,7 @@
 								<i class="fa fa-fw fa-link" ng-if="contact.category == 'website'"></i>
 							</h3>
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-10 col-sm-11">
 							<h4>{{contact.subCat ? contact.subCat : contact.category}}</h4>
 							<p>
 								<a ng-href="{{contact.category == 'website' ? contact.value : contact.category == 'email' ? 'mailto:'+contact.value : 'tel:'+contact.value}}" target="_blank">{{contact.value}}</a>
