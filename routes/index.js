@@ -178,10 +178,97 @@ router.get('/user/:userId', function(req, res, next) {
         // Additional Career Fields
         /*publications: [], // not required*/
         courses: [{
-            name: 'course 1',
+            name: 'Computer Languages and Programming',
             associateSchool: 'Tsinghua University'
         },{
-            name: 'course 2',
+            name: 'Fundamentals of Programming',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'The Practice of C++ Programming',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Data Structure',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Database',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'JAVA and Object-Oriented Programming',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Advanced Matlab Programming and Its Application',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Computer Organization',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Fundamentals of Semiconductor Devices',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Digital Logic Circuits & Systems',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Laboratory of Electronic Circuits',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Probability and Stochastic Processes (1)',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Probability and Stochastic Processes (2)',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Principles of Imaging Information',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Signals and Systems',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Electronic Technology Practice',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Communication Circuits Laboratory',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Communication RF Circuits Design',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Fundamentals of Communication Networks',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Principles of Antenna',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Fundamentals of Microwave and Lightwave Technology',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Electronic Circuits Course Design',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Principles of Modern Communications',
+            associateSchool: 'Tsinghua University'
+        },{
+            name: 'Analysis of Deterministic Signals and Systems',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'Introduction to Local and Wide Area Networks',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'Mobile and Ubiquitous Computing',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'ST: Noise in Analog and Mixed Signal Circuit and Systems',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'SP: Digital Systems Testing and Design',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'Database Management Systems',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'Methodologies for System Level Design and Modeling',
+            associateSchool: 'Worcester Polytechnic Institute'
+        },{
+            name: 'Digital Signal Processing',
             associateSchool: 'Worcester Polytechnic Institute'
         }], // required can empty based on education
         certificates: [{
@@ -200,22 +287,86 @@ router.get('/user/:userId', function(req, res, next) {
             dateStart: new Date('2015-10-01'),
             dateEnd: null,
             url: 'https://www.coursera.org/account/accomplishments/certificate/PEWBH5HJJRX8'
+        },{
+            name: 'R Programming',
+            license: 'SW8Q6D4DST',
+            authority: 'Coursera Verified Certificates',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2015-10-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/SW8Q6D4DST'
+        },{
+            name: 'Front-End Web UI Frameworks and Tools',
+            license: 'AXG3FKGYYYGM',
+            authority: 'Coursera Verified Certificates',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2015-11-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/AXG3FKGYYYGM'
+        },{
+            name: 'The Data Scientist\'s Toolbox',
+            license: 'Q38HWR87QP',
+            authority: 'Coursera Verified Certificates',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2015-10-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/Q38HWR87QP'
+        },{
+            name: 'Getting and Cleaning Data',
+            license: 'SR8BV2BQ3N',
+            authority: 'Coursera Verified Certificates',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2015-11-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/SR8BV2BQ3N'
         }], // not required
         projects: [{
             name: 'A Comprehensive Comparative Performance Evaluation of Signal Processing Features in Detecting Alcohol Consumption from Gait Data',
             occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
             description: '<u>Team and Objective:</u> Work under instructions from advisor to improve accuracy of existing project AlcoGait by applying new features, new extraction method involving DSP, and correlation analysis<br /><u>Content:</u> Implement 27 features in MATLAB code, extract these features from data set, calculate correlation between feature and prediction and find 22 better ones, also analyze their performance in different machine learning classifiers.',
             member: ['Muxi Qi', 'Emmanuel Agu'],
-            dateStart: new Date(),
-            dateEnd: new Date(),
+            dateStart: new Date('2015-09-01'),
+            dateEnd: new Date('2016-05-31'),
             url: ''
         },{
-            name: 'A Comprehensive Comparative Performance Evaluation of Signal Processing Features in Detecting Alcohol Consumption from Gait Data',
+            name: 'Exchange Plus_Worcester (Full-Stack Application)',
             occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
-            description: '<u>Team and Objective:</u> Work under instructions from advisor to improve accuracy of existing project AlcoGait by applying new features, new extraction method involving DSP, and correlation analysis<br /><u>Content:</u> Implement 27 features in MATLAB code, extract these features from data set, calculate correlation between feature and prediction and find 22 better ones, also analyze their performance in different machine learning classifiers.',
-            member: ['Muxi Qi', 'Emmanuel Agu'],
-            dateStart: new Date(),
-            dateEnd: new Date(),
+            description: '<u>Team and Objective:</u> Work in group of two to design a web application to provide a more information protective way to exchange local 2nd hand products, also experiencing the differences between SQL and NoSQL databases.<br /><u>Content:</u> Front-End Design using Bootstrap and Angular; Sever-Side Design using php; Database-Side Design using mySQL and MongoDB; Tests to briefly compare performance between SQL and NoSQL databases<br /><u>Outcome:</u> such a web app running on local apache server',
+            member: ['Muxi Qi', 'Jing Yang'],
+            dateStart: new Date('2015-09-01'),
+            dateEnd: new Date('2015-12-31'),
+            url: 'https://github.com/qimuxi1990/ExchangePlusWorcester.git'
+        },{
+            name: 'Writing In Air (Android Application)',
+            occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
+            description: '<u>Team and Objective:</u> Work in a group of three to designed an android app to keep track of user writing gestures (single alphabetical) and display an image of the alphabet as output<br /><u>Content:</u> Collect data from multiple sensors (including linear acceleration, gravity, magnetic); Use noise filters; Implemented the UI design; Use multiple MVC android threads.<br /><u>Outcome:</u> a demo app tracking simple writing gestures successfully',
+            member: ['Muxi Qi', 'Xuanyu Li', 'Chen Lin'],
+            dateStart: new Date('2015-02-01'),
+            dateEnd: new Date('2015-06-30'),
+            url: 'https://github.com/qimuxi1990/Writing-In-Air.git'
+        },{
+            name: 'Application of Compressed Sensing of Underwater Sensor',
+            occupation: 'Student at Tsinghua University, Bachelor of Engineering (B.E) Electronics Information Science and Technology',
+            description: '<u>Objective:</u> Work in a group of two to apply the compressed sensing theory to under water sensor system, in Research Institute of High-Speed Signal Processing and Network Transmission<br /><u>Content:</u> Assist researching papers, optimizing researching direction, applying recovery matrix',
+            member: ['Muxi Qi'],
+            dateStart: new Date('2013-09-01'),
+            dateEnd: new Date('2013-12-31'),
+            url: ''
+        },{
+            name: 'A Research on Border Detection of ID Card Photos Taken by Mobile Phones',
+            occupation: 'Student at Tsinghua University, Bachelor of Engineering (B.E) Electronics Information Science and Technology',
+            description: '<u>Object:</u> Work individually to design an algorithm to fast and accurately locate the boundaries of business card areas in photos of business cards, which are taken by cellphones, in Research Institute of Network and Human-Machine Speech Communication<br /><u>Content:</u> Algorithm collection, applicability analysis and verification, timing and accuracy performance test, algorithm design and implementation, comprehensive performance test<br /><u>Outcome:</u> Successfully implement boundary detection solution inspired by Euclidean geometry principle and real-time detected domain theory under two-dimensional code, and write a thesis collected in university database',
+            member: ['Muxi Qi', 'Changsong Liu'],
+            dateStart: new Date('2012-09-01'),
+            dateEnd: new Date('2013-06-31'),
+            url: ''
+        },{
+            name: 'Research on Visible Light Communication within Short Range',
+            occupation: 'Student at Tsinghua University, Bachelor of Engineering (B.E) Electronics Information Science and Technology',
+            description: '<u>Objective:</u> Work in group of five to design a short range communication system based on visible light, in Optical Wireless Information System Lab (OWISL)<br /><u>Content:</u> Assist designing intermediate power amplifier in transmitter and receiver<br /><u>Outcome:</u> Our group successfully establish a short range visible light communication system',
+            member: ['Muxi Qi'],
+            dateStart: new Date('2011-09-01'),
+            dateEnd: new Date('2011-12-01'),
             url: ''
         }], // not required
         /*volunteer: {

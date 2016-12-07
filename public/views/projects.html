@@ -6,12 +6,12 @@
 				<h3 class="panel-title">Projects</h3>
 			</div>
 			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="project in user.projects | orderBy: 'dateStart' : true">
+				<li class="list-group-item" ng-repeat="project in user.projects | orderBy: ['-dateStart', '-dateEnd']">
 					<h4 class="media-heading">{{project.name}}</h4>
 					<p ng-bind-html="project.description">
 					</p>
 					<p>{{project.dateStart | date : 'yyyy MMM'}} - {{(project.dateEnd | date : 'yyyy MMM') || 'Present'}}</p>
-					<p>{{project.member.join(', ')}}</p>
+					<p>{{project.member.sort().join(', ')}}</p>
 				</li>
 			</ul>
 			<div class="panel-footer text-center">
