@@ -15,7 +15,7 @@
 							<h4 class="media-heading">{{experience.title}}</h4>
 							<p>
 								{{experience.company}}<br />
-								{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}
+								{{experience.dateStart | date : 'yyyy MMM' : '+0000' }} - {{(experience.dateEnd | date : 'yyyy MMM' : '+0000' ) || 'Present'}}
 							</p>
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 							<h4 class="media-heading">{{education.school}}</h4>
 							<p>
 								{{education.degree}}, {{education.fieldOfStudy}}<br />
-								{{education.dateStart | date : 'yyyy'}} - {{(education.dateEnd | date : 'yyyy') || 'Present'}}
+								{{education.dateStart | date : 'yyyy' : '+0000' }} - {{(education.dateEnd | date : 'yyyy' : '+0000' ) || 'Present'}}
 							</p>
 						</div>
 					</div>

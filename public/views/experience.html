@@ -15,7 +15,7 @@
 							<h4 class="media-heading">{{experience.title}}</h4>
 							<p>
 								{{experience.company}}<br />
-								{{experience.dateStart | date : 'yyyy MMM'}} - {{(experience.dateEnd | date : 'yyyy MMM') || 'Present'}}<br />
+								{{experience.dateStart | date : 'yyyy MMM' : '+0000' }} - {{(experience.dateEnd | date : 'yyyy MMM' : '+0000' ) || 'Present'}}<br />
 								{{experience.location}}
 							</p>
 						</div>

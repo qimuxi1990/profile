@@ -11,7 +11,7 @@ router.get('/user/:userId', function(req, res, next) {
         // Basic Fields
         firstname: 'Muxi', // required
         lastname: 'Qi', // required
-        avatar: './images/avatar.jpg', // not required
+        avatar: './images/avatar-qimuxi1990.png', // not required
         address: {
             street: '30 Beulah Street Apt 4',
             city: 'Framingham',
@@ -42,8 +42,8 @@ router.get('/user/:userId', function(req, res, next) {
         }], // required not empty
         // Career Fields
         /*adviceForContacting: '', // not required*/
-        summary: 'I am an Electrical Engineering graduate student with also plenty of Computer Science and Data Science skills. My current objective is to look for a job in the industries related to Software or Computer Engineering.', // required can empty
-        position: 'Application Developer at Diamond Diagnostics', // required not empty
+        summary: 'I am an Electrical Engineering graduate student with also plenty of Computer Science and Data Science skills. My current objective is a full-time job in the industries related to Software & Computer Engineering.', // required can empty
+        position: 'Applications Engineer II, at Diamond Diagnostics Inc.', // required not empty
         experience: [{
             title: 'Engineering Intern',
             description: '<u>Content:</u> Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
@@ -51,14 +51,14 @@ router.get('/user/:userId', function(req, res, next) {
             location: '1 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
             logo: './images/logo-default.png',
             industry: 'Electronics',
-            dateStart: new Date('2016-07-01'),
-            dateEnd: new Date('2016-08-01')
+            dateStart: new Date('2012-07-01'),
+            dateEnd: new Date('2012-08-01')
         },{
-            title: 'Application Developer',
-            description: '<u>Objective</u>: Perform Software/Program Development, Application Customization, Database/Reporting Development/Management, with tools like Mongo-Express-Angular-NodeJS, and SQL Server Reporting Services. Also complete any professional task or job function asked by the company.<br /><u>Content:</u> Full-Stack App Development based on Mongo-Express-Angular-NodeJS and ElasticSearch, Reporting Development based on SQL Server Reporting Services and also Visual Studio Tools for Office.',
+            title: 'Applications Engineer II',
+            description: '<u>Content:</u> Perform Full-Stack application development with NodeJS and Angular, .Net application development,database migration between SQL and Mongo, and BI warehouse ETL design.',
             company: 'Diamond Diagnostics Inc.',
             location: '333 Fiske ST, Hollistion, MA 01746',
-            logo: './images/logo-default.png',
+            logo: './images/logo-diamonddiagnostics.png',
             industry: 'Medical Devices',
             dateStart: new Date('2016-08-01'),
             dateEnd: null
@@ -173,6 +173,21 @@ router.get('/user/:userId', function(req, res, next) {
             endorsement: 0
         },{
             name: 'Microsoft Office',
+            endorsement: 0
+        },{
+            name: 'Typescript',
+            endorsement: 0
+        },{
+            name: 'C#',
+            endorsement: 0
+        },{
+            name: '.Net',
+            endorsement: 0
+        },{
+            name: 'AngularJS',
+            endorsement: 0
+        },{
+            name: 'Angular',
             endorsement: 0
         }], // required
         // Additional Career Fields
@@ -321,6 +336,22 @@ router.get('/user/:userId', function(req, res, next) {
             url: 'https://www.coursera.org/account/accomplishments/certificate/SR8BV2BQ3N'
         }], // not required
         projects: [{
+            name: 'Company Portal Web App',
+            occupation: 'Applications Engineer II at Diamond Diagnostics Inc.',
+            description: '<u>Team and Objective:</u> Work in a group of three to enhance an existing Node webapp to a multi-page company internal portal including many component single page applications, including but not limited to sales, purchasing, inventory, manufacturing, financing and management.<br /><u>Content:</u> Setup application environment on linux server, including MongoDB 4.0, NodeJS 8.11, establish ExpressJS server with node-mssql 3.3, and mongoose 5.2, handle requests using mixed routes of RESTful and Non-RESTful api, design compact styled front-end pages using AngularJS, Bootstrap and customized css.<br /><u>Challenge and Solution:</u> A manner of displaying all records is preferred in our production and will result in huge rendering cost, so we implement pagination on scroll action with ng-table package.<br /><u>Outcome:</u> a comprehensive, integrated NodeJS web app used by every department.',
+            member: ['Muxi Qi', 'Kunal Watkar', 'Dylan Yao'],
+            dateStart: new Date('2017-06-01'),
+            dateEnd: null,
+            url: ''
+        },{
+            name: 'Excel-based Reporting Engine',
+            occupation: 'Applications Engineer II at Diamond Diagnostics Inc.',
+            description: '<u>Team and Object:</u> Work individually to produce a reporting system which takes SQL data and generates excel workbooks as output. This system should be distributed to all client PCs throughout the company and should be sensitive to changes on both application and the reports generated.<br /><u>Content:</u> Build upgradable Excel Addin application using Visual Studio InstallShield, schedule app version check/notification on load, achieve access control based on Windows credential, design json feed configuration in MongoDB, and implement features, including report parameterization, data fetching and workbook formatting, using .Net/VSTO library.<br /><u>Challenge and Solution:</u> Long time cost from data fetching results in slow performance, so an async procedure is called while the main process is rendering basic components and styles; Report design changes frequently as requested, so a report engine with json feed from database is my choice; Application can only be installed by administrator under company policy but PS-remoting has limit on network and firewall, so an on-load version checking and notification procedure is added in case of version discrepancy<br /><u>Outcome:</u> an Excel Addin application widely and frequently used in our production.',
+            member: ['Muxi Qi'],
+            dateStart: new Date('2016-08-01'),
+            dateEnd: new Date('2017-05-31'),
+            url: ''
+        },{
             name: 'A Comprehensive Comparative Performance Evaluation of Signal Processing Features in Detecting Alcohol Consumption from Gait Data',
             occupation: 'Student at Worcester Polytechnic Institute, Master of Science (M.S) Electrical and Computer Engineering',
             description: '<u>Team and Objective:</u> Work under instructions from advisor to improve accuracy of existing project AlcoGait by applying new features, new extraction method involving DSP, and correlation analysis<br /><u>Content:</u> Implement 27 features in MATLAB code, extract these features from data set, calculate correlation between feature and prediction and find 22 better ones, also analyze their performance in different machine learning classifiers.',
@@ -355,7 +386,7 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'A Research on Border Detection of ID Card Photos Taken by Mobile Phones',
             occupation: 'Student at Tsinghua University, Bachelor of Engineering (B.E) Electronics Information Science and Technology',
-            description: '<u>Object:</u> Work individually to design an algorithm to fast and accurately locate the boundaries of business card areas in photos of business cards, which are taken by cellphones, in Research Institute of Network and Human-Machine Speech Communication<br /><u>Content:</u> Algorithm collection, applicability analysis and verification, timing and accuracy performance test, algorithm design and implementation, comprehensive performance test<br /><u>Outcome:</u> Successfully implement boundary detection solution inspired by Euclidean geometry principle and real-time detected domain theory under two-dimensional code, and write a thesis collected in university database',
+            description: '<u>Team and Objective:</u> Work individually to design an algorithm to fast and accurately locate the boundaries of business card areas in photos of business cards, which are taken by cellphones, in Research Institute of Network and Human-Machine Speech Communication<br /><u>Content:</u> Algorithm collection, applicability analysis and verification, timing and accuracy performance test, algorithm design and implementation, comprehensive performance test<br /><u>Outcome:</u> Successfully implement boundary detection solution inspired by Euclidean geometry principle and real-time detected domain theory under two-dimensional code, and write a thesis collected in university database',
             member: ['Muxi Qi', 'Changsong Liu'],
             dateStart: new Date('2012-09-01'),
             dateEnd: new Date('2013-06-31'),

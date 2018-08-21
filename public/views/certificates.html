@@ -10,7 +10,7 @@
 					<h4>{{certificate.name}}</h4>
 					<p>
 						License: {{certificate.license}}<br />
-						{{certificate.dateStart | date : 'yyyy MMM'}}<span ng-if="certificate.dateEnd"> - {{certificate.dateEnd | date : 'yyyy MMM'}}</span>
+						{{certificate.dateStart | date : 'yyyy MMM' : '+0000' }}<span ng-if="certificate.dateEnd"> - {{certificate.dateEnd | date : 'yyyy MMM' : '+0000' }}</span>
 					</p>
 					<div class="media">
 						<div class="media-left media-top">

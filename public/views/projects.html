@@ -10,7 +10,7 @@
 					<h4 class="media-heading">{{project.name}}</h4>
 					<p ng-bind-html="project.description">
 					</p>
-					<p>{{project.dateStart | date : 'yyyy MMM'}} - {{(project.dateEnd | date : 'yyyy MMM') || 'Present'}}</p>
+					<p>{{project.dateStart | date : 'yyyy MMM' : '+0000' }} - {{(project.dateEnd | date : 'yyyy MMM' : '+0000' ) || 'Present'}}</p>
 					<p>{{project.member.sort().join(', ')}}</p>
 				</li>
 			</ul>
