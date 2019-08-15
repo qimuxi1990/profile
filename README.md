@@ -43,3 +43,4 @@ To host an OpenShift app at a specified url, the following steps should be taken
 
 ### Reference
 [Migrating Your Applications From OpenShift 2 to 3](https://blog.openshift.com/migrating-your-applications-from-openshift-2-to-3/)
+[LinkedIn Development API Full Profile](https://docs.microsoft.com/zh-cn/linkedin/shared/references/v2/profile/full-profile?context=linkedin/consumer/context)

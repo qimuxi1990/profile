@@ -42,25 +42,43 @@ router.get('/user/:userId', function(req, res, next) {
         }], // required not empty
         // Career Fields
         /*adviceForContacting: '', // not required*/
-        summary: 'I am an Electrical Engineering graduate student with also plenty of Computer Science and Data Science skills. My current objective is a full-time job in the industries related to Software & Computer Engineering.', // required can empty
-        position: 'Applications Engineer II, at Diamond Diagnostics Inc.', // required not empty
+        summary: 'Innovative, analytical, and diligent computer and software engineer with broad experience transforming and streamlining enterprise-wide processes to increase productivity, reduce inefficiencies, and increase accuracy. Skilled at JavaScript programming and consulting engineering team projects backed by expertise in advanced technologies acquired during graduate coursework in computer science. Exceptional interpersonal skills to sustain project planning, design reviews, and code reviews.', // required can empty
+        position: 'Senior Software Engineer, at Diamond Diagnostics Inc.', // required not empty
         experience: [{
             title: 'Engineering Intern',
-            description: '<u>Content:</u> Contribute to Radar scanning control and display interfaces using MFC. Test handle and scanning display with non-real time data from database.',
-            company: 'Beijing Lein Electronic Technology Co., LTD',
-            location: '1 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
-            logo: './images/logo-default.png',
+            description: '<ul><li>Consulted and supported engineers on a radar scanning control and display project using Microsoft Foundation Class (MFC) library in a C++ object-oriented environment.</li></ul>',
+            company: 'Beijing Leiyin Electronic Technology Development Co., Ltd.',
+            location: '3 Haiying ST, Kexuecheng, Fengtai District, Beijing, Beijing, China',
+            logo: './images/logo-leiyin.png',
             industry: 'Electronics',
             dateStart: new Date('2012-07-01'),
             dateEnd: new Date('2012-08-01')
         },{
-            title: 'Applications Engineer II',
-            description: '<u>Content:</u> Perform Full-Stack application development with NodeJS and Angular, .Net application development,database migration between SQL and Mongo, and BI warehouse ETL design.',
+            title: 'Application Engineer I',
+            description: '<ul><li>Investigating Business Intelligence requirement for all departments in company.</li><li>Developed an Excel .Net reporting system to facilitate document updating and quickly compile large data requests company-wide with an engine feed accomplished with an asynchronized work flow and .Net table render technique.</li><li>Built a sturdy and dependable reporting engine using .Net VSTO, C#, ClickOnce, InstallShield, SQL, and MongoDB and resolved glitches in Excel Tier 1 design utilizing Async calls without extra data IO.</li></ul>',
             company: 'Diamond Diagnostics Inc.',
             location: '333 Fiske ST, Hollistion, MA 01746',
             logo: './images/logo-diamonddiagnostics.png',
             industry: 'Medical Devices',
             dateStart: new Date('2016-08-01'),
+            dateEnd: new Date('2017-05-01')
+        },{
+            title: 'Application Engineer II',
+            description: '<ul><li>Engineered an e-Commerce full-stack application to bolster product competition in the marketplace.</li><li>Increased efficiency and productivity of the enterprise resource planning full-stack application.</li><li>Streamlined data integration with Node.js, Angular.js, MS SQL and MongoDB to advance productivity and guarantee accuracy in scalable modules.</li><li>Collaborated with two applications engineers to upgrade the company management portal and streamline communication between customers, sales, and services resulting in a 50% increase in client requests.</li><li>Worked with a team of two other application engineers to develop a web platform to increase enterprise-wide productivity, automation, and communication.</li><li>Enhance BI engine by designing SQL ETL reporting system with incrementing and self-correction feature.</li></ul>',
+            company: 'Diamond Diagnostics Inc.',
+            location: '333 Fiske ST, Hollistion, MA 01746',
+            logo: './images/logo-diamonddiagnostics.png',
+            industry: 'Medical Devices',
+            dateStart: new Date('2017-06-01'),
+            dateEnd: new Date('2019-05-01')
+        },{
+            title: 'Senior Application Engineer',
+            description: '<ul><li>Leading a team of four Application Engineers to enhance e-Commerce and enterprice resource planning applications.</li><li>Structure and accomplish cross-application SQL integration between enterprice resource planning appilcation and 3rd party applications, like Microsoft Dynamics GP.</li><li>Design RESTful api class layer on back-end to standarize and centralize database operation for higher data integrity and lower transaction risk.</li><li>Finalize project requirement and blueprint, and schedule project timeline with deparment leaders and sales representitives for applications.</li><li>Mentor new application engineers to learn techniques used in these applications, assign and review their tasks until they can confidently participate in development lifecycle using Git.</li></ul>',
+            company: 'Diamond Diagnostics Inc.',
+            location: '333 Fiske ST, Hollistion, MA 01746',
+            logo: './images/logo-diamonddiagnostics.png',
+            industry: 'Medical Devices',
+            dateStart: new Date('2019-06-01'),
             dateEnd: null
         }], // required can empty
         educations: [{
@@ -92,10 +110,10 @@ router.get('/user/:userId', function(req, res, next) {
             endorsement: 3
         },{
             name: 'Data Science',
-            endorsement: 1
+            endorsement: 0
         },{
             name: 'Signal Processing',
-            endorsement: 5
+            endorsement: 4
         },{
             name: 'Image Processing',
             endorsement: 0
@@ -113,12 +131,15 @@ router.get('/user/:userId', function(req, res, next) {
             endorsement: 0
         },{
             name: 'Programming',
-            endorsement: 3
+            endorsement: 2
         },{
             name: 'Databases',
             endorsement: 1
         },{
             name: 'Web Development',
+            endorsement: 0
+        },{
+            name: 'Full-Stack Development',
             endorsement: 0
         },{
             name: 'C++',
@@ -137,7 +158,7 @@ router.get('/user/:userId', function(req, res, next) {
             endorsement: 0
         },{
             name: 'R',
-            endorsement: 0
+            endorsement: 1
         },{
             name: 'SQL',
             endorsement: 0
@@ -154,26 +175,8 @@ router.get('/user/:userId', function(req, res, next) {
             name: 'JavaScript',
             endorsement: 1
         },{
-            name: 'ElasticSearch',
-            endorsement: 0
-        },{
-            name: 'SQL Server Reporting Services (SSRS)',
-            endorsement: 0
-        },{
             name: 'Matlab',
-            endorsement: 1
-        },{
-            name: 'Altera Quartus',
-            endorsement: 0
-        },{
-            name: 'PSpice',
-            endorsement: 0
-        },{
-            name: 'Adobe Creative Suite',
-            endorsement: 0
-        },{
-            name: 'Microsoft Office',
-            endorsement: 0
+            endorsement: 2
         },{
             name: 'Typescript',
             endorsement: 0
@@ -184,10 +187,10 @@ router.get('/user/:userId', function(req, res, next) {
             name: '.Net',
             endorsement: 0
         },{
-            name: 'AngularJS',
+            name: 'Angular',
             endorsement: 0
         },{
-            name: 'Angular',
+            name: 'PHP',
             endorsement: 0
         }], // required
         // Additional Career Fields
@@ -289,7 +292,7 @@ router.get('/user/:userId', function(req, res, next) {
         certificates: [{
             name: 'Introduction to HTML5',
             license: '8DLERMS2M2M3',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-09-01'),
             dateEnd: null,
@@ -297,7 +300,7 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'HTML, CSS and JavaScript',
             license: 'PEWBH5HJJRX8',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-10-01'),
             dateEnd: null,
@@ -305,7 +308,7 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'R Programming',
             license: 'SW8Q6D4DST',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-10-01'),
             dateEnd: null,
@@ -313,7 +316,7 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'Front-End Web UI Frameworks and Tools',
             license: 'AXG3FKGYYYGM',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-11-01'),
             dateEnd: null,
@@ -321,7 +324,7 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'The Data Scientist\'s Toolbox',
             license: 'Q38HWR87QP',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-10-01'),
             dateEnd: null,
@@ -329,11 +332,75 @@ router.get('/user/:userId', function(req, res, next) {
         },{
             name: 'Getting and Cleaning Data',
             license: 'SR8BV2BQ3N',
-            authority: 'Coursera Verified Certificates',
+            authority: 'Coursera',
             logo: './images/logo-coursera.png',
             dateStart: new Date('2015-11-01'),
             dateEnd: null,
             url: 'https://www.coursera.org/account/accomplishments/certificate/SR8BV2BQ3N'
+        },{
+            name: 'Exploratory Data Analysis',
+            license: 'W8N8U5527AWP',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2016-08-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/W8N8U5527AWP'
+        },{
+            name: 'Server-side Development with NodeJS',
+            license: 'K3MBYMM3RKKC',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2016-09-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/verify/K3MBYMM3RKKC'
+        },{
+            name: 'Multiplatform Mobile App Development with Web Technologies',
+            license: 'ABNCM5JC5NLE',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2016-09-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/verify/ABNCM5JC5NLE'
+        },{
+            name: 'Front-End Javascript Frameworks: AngularJS',
+            license: 'VTTHZFREDUM5',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2016-10-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/verify/VTTHZFREDUM5'
+        },{
+            name: 'Computer Vision Basics',
+            license: 'BJ84V2RAYJ7D',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2019-05-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/verify/BJ84V2RAYJ7D'
+        },{
+            name: 'Visual Recognition & Understanding',
+            license: 'A52KV8MHUVNJ',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2019-06-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/verify/A52KV8MHUVNJ'
+        },{
+            name: 'Image Processing, Feature & Segmentation',
+            license: '6NHKZFX5GBGF',
+            authority: 'Coursera',
+            logo: './images/logo-coursera.png',
+            dateStart: new Date('2019-07-01'),
+            dateEnd: null,
+            url: 'https://www.coursera.org/account/accomplishments/certificate/6NHKZFX5GBGF'
+        },{
+            name: 'Deep Learning Onramp',
+            license: '1bf945ad-6572-4a05-ba4d-658e709d1777',
+            authority: 'MathWorks',
+            logo: './images/logo-mathworks.png',
+            dateStart: new Date('2019-06-01'),
+            dateEnd: null,
+            url: 'https://matlabacademy.mathworks.com/progress/share/certificate.html?id=1bf945ad-6572-4a05-ba4d-658e709d1777'
         }], // not required
         projects: [{
             name: 'Company Portal Web App',
