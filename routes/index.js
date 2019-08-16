@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 router.use(bodyParser.json());
 
+/* AWS health check */
+router.get('/health', function(req, res, next) { res.status(200).end(); });
+
 /* GET home page. */
 router.get('/user/:userId', function(req, res, next) {
     var user = {
